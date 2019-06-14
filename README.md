@@ -148,10 +148,10 @@ Para las ramas sólo remotas:
 ```
 $ git branch -r
 ```
+*La rama actual es la que a su izquierda tiene un asterisco*
 
 [Más información en este enlace!](https://git-scm.com/book/no-nb/v1/Git-Branching-Remote-Branches)
 
-*La rama actual es la que a su izquierda tiene un asterisco*
 
 ## Tags
 El tag le da un nombre de fácil asociación a los cambios guardados por el último commit de la rama en la que estás.
