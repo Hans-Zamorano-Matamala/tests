@@ -201,7 +201,7 @@ $ git push origin :nombre_del_tag
 ## o bien con
 $ git push --delete origin :refs/tags/tagname
 ## recrear tag
-$ git tag nombr_del_tag
+$ git tag nombre_del_tag
 ## hacer push del tag
 $ git push origin nombre_del_tag
 
