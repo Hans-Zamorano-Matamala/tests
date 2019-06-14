@@ -6,7 +6,8 @@ Testing examples with various suites and tasks automating
 Last changed: 13 june, 2019.
 
 #About git:
-* git fetch: The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.
+## git fetch
+The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.
 
 Examples:
 ```
@@ -14,7 +15,8 @@ $ git fetch origin
 $ git fetch [remote-name]
 ```
 
-* git remote show: Esto lista la URL del repositorio remoto, así como información sobre las ramas bajo seguimiento. Este comando te recuerda que si estás en la rama maestra y ejecutas git pull, automáticamente unirá los cambios a la rama maestra del remoto después de haber recuperado todas las referencias remotas. También lista todas las referencias remotas que ha recibido. Este comando muestra qué rama se envía automáticamente cuando ejecutas git push en determinadas ramas. También te muestra qué ramas remotas no tienes todavía, qué ramas remotas tienes y han sido eliminadas del servidor, y múltiples ramas que serán unidas automáticamente cuando ejecutes git pull.
+## git remote show
+Esto lista la URL del repositorio remoto, así como información sobre las ramas bajo seguimiento. Este comando te recuerda que si estás en la rama maestra y ejecutas git pull, automáticamente unirá los cambios a la rama maestra del remoto después de haber recuperado todas las referencias remotas. También lista todas las referencias remotas que ha recibido. Este comando muestra qué rama se envía automáticamente cuando ejecutas git push en determinadas ramas. También te muestra qué ramas remotas no tienes todavía, qué ramas remotas tienes y han sido eliminadas del servidor, y múltiples ramas que serán unidas automáticamente cuando ejecutes git pull.
 
 Ejemplo:
 ```
@@ -46,9 +48,11 @@ $ git remote show origin
     master:master
 ```
 
-* git checkout: para obtener datos de la rama indicada (revisar branching y checkout) 
+## git checkout
+Para obtener datos de la rama indicada (revisar branching y checkout) 
 
-* Branching & checkout: (fuente: https://git-scm.com/book/es/v1/Ramificaciones-en-Git-Procedimientos-b%C3%A1sicos-para-ramificar-y-fusionar) Decides trabajar el problema #53, creas la ramificación en un paso con:
+## Branching & checkout
+(fuente: https://git-scm.com/book/es/v1/Ramificaciones-en-Git-Procedimientos-b%C3%A1sicos-para-ramificar-y-fusionar) Decides trabajar el problema #53, creas la ramificación en un paso con:
 ```
 $ git checkout -b iss53
 ```
@@ -146,3 +150,27 @@ $ git branch -r
 ```
 
 [Más información en este enlace!](https://git-scm.com/book/no-nb/v1/Git-Branching-Remote-Branches)
+
+*La rama actual es la que a su izquierda tiene un asterisco*
+
+## Tags
+El tag le da un nombre de fácil asociación a los cambios por guardar.
+
+Listar
+
+```
+$ git tag 
+```
+
+Añadir
+
+```
+$ git tag nombre_tag
+```
+
+Subir, es igual a actualizar un branch
+
+```
+$ git push --delete nombre_remoto tag
+```
+
