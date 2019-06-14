@@ -155,7 +155,7 @@ $ git branch -r
 
 
 ## Tags
-El tag le da un nombre de fácil asociación a los cambios guardados por el último commit de la rama en la que estás.
+El tag le da un nombre de fácil asociación a los cambios guardados por el último commit de la rama en la que estás. Sin embargo, debes actualizar tanto el tag como el branch al hacer push.
 
 Listar
 
