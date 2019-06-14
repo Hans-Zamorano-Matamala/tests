@@ -154,7 +154,7 @@ $ git branch -r
 *La rama actual es la que a su izquierda tiene un asterisco*
 
 ## Tags
-El tag le da un nombre de fácil asociación a los cambios por guardar.
+El tag le da un nombre de fácil asociación a los cambios guardados por el último commit de la rama en la que estás.
 
 Listar
 
@@ -172,5 +172,9 @@ Subir, es igual a actualizar un branch
 
 ```
 $ git push --delete nombre_remoto tag
+```
+Respuesta:
+```
+ * [new tag]         documentacion_v1.1 -> documentacion_v1.1
 ```
 
