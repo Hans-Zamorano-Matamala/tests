@@ -172,11 +172,17 @@ $ git tag nombre_tag
 Subir, es igual a actualizar un branch
 
 ```
-$ git push --delete nombre_remoto tag
+$ git push origin nombre_remoto tag
 ```
 Respuesta:
 ```
  * [new tag]         documentacion_v1.1 -> documentacion_v1.1
+```
+
+Recuerda actualizar la rama asociada con :
+
+```
+$ git push origin nombre_rama_asociada
 ```
 
 ¿Qué pasa si debo actualizar un tag?
