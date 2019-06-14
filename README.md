@@ -1,3 +1,5 @@
+([Sobre cómo usar markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet))
+
 # Tests
 Testing examples with various suites and tasks automating
 * Testing with various git functionalities: branch, pull requests
@@ -107,11 +109,14 @@ Cabe indicar que todo el trabajo realizado en la rama hotfix no está en los arc
 
 Supongamos que tu trabajo con el problema #53 está ya completo y listo para fusionarlo (merge) con la rama master. Para ello, de forma similar a como antes has hecho con la rama hotfix, vas a fusionar la rama iss53. Simplemente, activando (checkout) la rama donde deseas fusionar y lanzando el comando git merge:
 
+```
 $ git checkout master
 $ git merge iss53
 Merge made by recursive.
  README |    1 +
  1 files changed, 1 insertions(+), 0 deletions(-)
+```
+
 Es algo diferente de la fusión realizada anteriormente con hotfix. En este caso, el registro de desarrollo había divergido en un punto anterior. Debido a que la confirmación en la rama actual no es ancestro directo de la rama que pretendes fusionar, Git tiene cierto trabajo extra que hacer. Git realizará una fusión a tres bandas, utilizando las dos instantáneas apuntadas por el extremo de cada una de las ramas y por el ancestro común a ambas dos.
 
 En lugar de simplemente avanzar el apuntador de la rama, Git crea una nueva instantánea (snapshot) resultante de la fusión a tres bandas; y crea automáticamente una nueva confirmación de cambios (commit) que apunta a ella. Nos referimos a este proceso como "fusión confirmada". Y se diferencia en que tiene más de un padre.
@@ -120,4 +125,24 @@ Merece la pena destacar el hecho de que es el propio Git quien determina automá
 
 Ahora que todo tu trabajo está ya fusionado con la rama principal, ya no tienes necesidad de la rama iss53. Por lo que puedes borrarla. Y cerrar manualmente el problema en el sistema de seguimiento de problemas de tu empresa.
 
+```
 $ git branch -d iss53
+$ git push --delete nombre_remoto iss53
+```
+
+Usualmente el nombre_remot_ es _origin_
+
+Puedes ver todas las ramas con:
+
+```
+$ git branch --all
+$ git branch -a
+```
+
+Para las ramas sólo remotas:
+
+```
+$ git branch -r
+```
+
+[Más información en este enlace!](https://git-scm.com/book/no-nb/v1/Git-Branching-Remote-Branches)
