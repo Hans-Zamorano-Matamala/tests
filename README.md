@@ -186,3 +186,30 @@ Los tags son como branches que no cambian, por lo que si subiste un tag "version
 * Eliminar remotamente el tag,
 * Crear el mismo tag localmente otra vez,
 * Hacer push del tag
+
+En comandos esto sería:
+
+```
+## commit
+$ git commit -m "mensajes"
+## borrar tag local
+$ git tag -d Nombre_del_tag
+## borrar tag remoto
+$ git push --delete origin nombre_del_tag
+## alternativamente a esto último
+$ git push origin :nombre_del_tag
+## o bien con
+$ git push --delete origin :refs/tags/tagname
+## recrear tag
+$ git tag nombr_del_tag
+## hacer push del tag
+$ git push origin nombre_del_tag
+
+```
+
+# Ammend
+En caso quieras deshacer un git usa:
+
+```
+$ git commit --amend
+```
