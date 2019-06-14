@@ -13,6 +13,7 @@ Examples:
 ```
 $ git fetch origin
 $ git fetch [remote-name]
+$ git fetch --tags
 ```
 
 ## git remote show
@@ -178,3 +179,10 @@ Respuesta:
  * [new tag]         documentacion_v1.1 -> documentacion_v1.1
 ```
 
+¿Qué pasa si debo actualizar un tag?
+Los tags son como branches que no cambian, por lo que si subiste un tag "version_1.1" y olvidaste hacer cambios, debes:
+* Hacer commit de tus cambios a la rama correspondiente
+* Eliminar localmente el tag,
+* Eliminar remotamente el tag,
+* Crear el mismo tag localmente otra vez,
+* Hacer push del tag
