@@ -214,7 +214,7 @@ $ git push origin nombre_del_tag
 ```
 
 # Ammend
-En caso quieras deshacer un git usa:
+En caso quieras deshacer un commit usa:
 
 ```
 $ git commit --amend
